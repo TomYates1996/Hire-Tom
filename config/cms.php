@@ -1,12 +1,12 @@
 <?php
 
 return [
-    'site_name' => 'Base CMS',
+    'site_name' => 'Hire Tom',
     'site_owner' => 'Tom Yates',
     'address' => '1 CMS Street',
     'city' => 'Hull',
-    'phone' => '01999999999',
-    'email' => 'email@email.com', 
+    'phone' => '07771967302',
+    'email' => 'twyates@proton.me', 
     'blog' => true,
     'blog_page' => 'blog',
     'events' => true,
