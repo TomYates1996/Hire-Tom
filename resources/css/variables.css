@@ -1,32 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Cal+Sans&family=Telex&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Cal+Sans&family=Telex&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
 
 :root {
         /* Site Specific Colours */
         --faint-border-colour: #00000000;
         --black: #0d0d0c;
         --white: #ffffff;
+        --light-grey: #e9e9e9;
         --grey: #bdbdbd;
+        /* --dark-grey: #2a2b2f; */
+        --dark-grey: #363636;
         --yellow: #fcba03;
-        --purple: #341857;
         --deep-pink: #4f1036;
         --deep-red: #570a0a;
-        --bright-red: #f60000;
+        --purple: #330033;
+        --bright-red: #f11;
+        --orange-red: #FF4500;
         --sea-green: #0a5749;
         --dull-green: #32570a;
         --pale-green: #afd18a;
+        --blue-green: #78fad1;
+        /* Button Colours */
+        --btn-one: #00c2ed;
+        --btn-two: #b4006c;
+        --btn-three: #59d39a;
+        --btn-four: #ff7f11;
         /* Site main colours */
-        --primary-colour: var(--deep-pink);
+        --primary-colour: var(--purple);
         --site-primary: var(--primary-colour);
         --text-primary: var(--white);
-        --secondary-colour: var(--pale-green);
+        --secondary-colour: var(--yellow);
         --text-secondary: var(--black);
-        --tertiary-colour: var(--dull-green);
+        --tertiary-colour: var(--bright-red);
         --text-tertiary: var(--white);
+        --bg-panel-colour: var(--blue-green);
         /* Text Colours */
         --in-stock: green;
         --out-stock: red;
         --low-stock: yellow;
         --hero-text-alt-colour: var(--white);
+
+        --text-panel-bg-colour: var(--black);
+
         /* Widths */
         --width-max: 1300px;
         --width-base: 1300px;
@@ -41,7 +56,7 @@
         --border-radius-default: 10px;
         --border-radius-cards: var(--border-radius-default);
         --border-radius-hero: 0px;
-        --border-radius-hero-alt: 100px 0px 100px 0px;
+        --border-radius-hero-alt: 0px 0px 75px 0px;
         --border-radius-slider-arrows: 100%;
         
         /* Fonts */
@@ -49,12 +64,12 @@
         --font-telex: "Telex", sans-serif;
         --font-cal-sans: "Cal Sans", sans-serif;
         
-        --font-heading: var(--font-cal-sans);
-        --font-body: var(--font-telex);
+        --font-heading: 'Signika', sans-serif;
+        --font-body: 'Signika', sans-serif;
         
         /* Font Sizes */
         --text-2xl: 1.25rem; 
-        
+        --wide-line-height: 1.6;
         /* Font Styling Collections */
         --widget-heading: 600 26px var(--font-heading);
         --widget-subheading: 400 14px var(--font-body);
@@ -128,15 +143,277 @@
     .toggle-btn .toggle-no {
         background-color: var(--white);
     }
+    .shopping-trolley {
+        color: var(--white);
+    }
+}
+
+.nav .nav-inner .page-list {
+    color: var(--white);
+}
+@media (hover: hover) {
+   .nav .nav-inner .page-list a {
+        color: var(--white);
+    } 
 }
     
 /* CMS STYLING - MOVE TO CORE WHEN COMPLETED */
 
 
+.page-item .dropdown .page-item.level-2 a {
+    color: var(--black);
+}
 
-@media screen and (min-width: 64em) {
-    #app nav.nav {
-        /* display: flex;
-        justify-content: space-between; */
+#app .hero_image_alt .content .item .text-section h3.slide-title {
+    font-size: 32px;
+    @media screen and (min-width: 64em) {
+        font-size: 4.375rem;
+    }
+}
+
+#app .front-page-wrapper.home {
+    nav {
+        background-color: transparent;
+        background-image: linear-gradient(to top,#0000,#000000b3);
+    }
+    .core-widget:first-of-type {
+        padding-top: 70px;
+        margin-top: 0px;
+        @media screen and (min-width: 40em) {
+            padding-top: 94px;
+            margin-top: 0px;
+        }
+    }
+}
+#app .front-page-wrapper {
+    nav {
+        background-color: var(--primary-colour);
+        position: fixed;
+        .nav-inner .page-list {
+            a {
+                color: var(--white);
+                font-weight: 600;
+                @media screen and (min-width: 64em) {
+                    font-size: 1rem;          
+                }
+            }
+            .page-item.level-2 a {
+                color: var(--black);
+                padding: 8px 18px;
+            }
+        }
+    }
+    .core-widget:first-of-type {
+        padding-top: 0px;
+        margin-top: 74px;
+        @media screen and (min-width: 40em) {
+            padding-top: 0px;
+            margin-top: 72px;
+        }
+    }
+    .core-widget.showcase:first-of-type {
+        padding-top: 40px;
+        @media screen and (min-width: 40em) {
+            padding-top: 60px;
+        }
+    }
+    &.home {
+        .core-widget.showcase:first-of-type {
+            padding-top: 76px;
+            @media screen and (min-width: 40em) {
+                padding-top: 100px;
+            }
+        }
+    }
+    nav.menu-dropdown {
+        .logo {
+            z-index: 999;
+        }
+    }
+    nav.hamburger-nav {
+        background-color: var(--primary-colour);
+        top: 0px;
+        padding-top: 90px;
+        padding-bottom: 20px;
+        .hamburger-inner.mobile {
+            padding-top: 20px;
+        }
+    }
+}
+footer.footer-top {
+    color: var(--black);
+    ul {
+        li {
+            a {
+                color: var(--black);
+            }
+        }
+    }
+    .right-upper {
+        color: var(--black);
+        .cta {
+            cursor: pointer;
+        }
+    }
+}
+
+
+/* Hero Default || Hero Image || Hero Image Default */
+#app .hero.hero_image {
+    .responsive-picture {
+        position: relative;
+        &::after {
+            content: '';
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            height: 50px;
+            bottom: 0px;
+            z-index: 2;
+            background-image: url(/storage/app/public/svgs/waveybottom.png);
+            background-size: cover;
+        }
+    }
+    .text-section {
+        bottom: 0%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: transparent;
+        background-color: #00000029;
+        height: 100%;
+        color: var(--white);
+        /* Make the image clickable or set below to all if you want to disable it */
+        pointer-events: none;
+        h3.slide-title {
+            font-size: 2.5rem;
+            color: var(--white);
+            pointer-events: all;
+            @media (hover:hover) {
+                a:hover {
+                    color: var(--white);
+                }
+            }
+        }
+        p.slide-desc {
+            font-size: 1.125rem;
+            padding-bottom: 20px;
+        }
+        a.btn-read-more {
+            background-color: transparent;
+            padding: 0px;
+            border: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            pointer-events: all;
+            p {
+                border: 3px solid var(--secondary-colour);
+                width: 100%;
+                min-width: 250px;
+                height: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                position: static;
+                transition: all 0.36s ease;
+                color: var(--white);
+                font-size: 1.125rem;
+            }
+            @media screen and (min-width: 40em) {
+                    flex-direction: column;
+                    height: 56px;
+                    justify-content: flex-start;
+                    overflow: hidden;
+                    position: relative;
+                    width: 240px;
+                    z-index: 5;
+                p {
+                    align-items: center;
+                    color: var(--white);
+                    display: flex;
+                    font-size: 20px;
+                    font-weight: 300;
+                    height: 56px;
+                    justify-content: center;
+                    opacity: 1;
+                    padding: 10px;
+                    position: absolute;
+                    width: 100%;
+                    border-top: 3px solid transparent;
+                    opacity: 1;
+                    top: 0;
+                    border-left: none;
+                    transition: all .36s ease;
+                    border-bottom: 3px solid var(--secondary-colour);
+                    font-weight: 600;
+                }
+                &::after {
+                    content: '\f35a';
+                    font-family: 'Font Awesome 6 Free';
+                    font-weight: 900;
+                    border: 3px solid var(--secondary-colour);
+                    top: 100%;
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    align-items: center;
+                    color: var(--white);
+                    display: flex;
+                    height: 56px;
+                    justify-content: center;
+                    opacity: 1;
+                    padding: 10px;
+                    position: absolute;
+                    transition: all .4s ease;
+                    width: 100%;
+                }
+                &:hover {
+                    p {
+                        top: -100%;
+                        opacity: 0;
+                    }
+                    &::after {
+                        top: 0px;
+                    }
+                }
+            }
+        }
+        @media screen and (min-width: 40em) {
+            padding-left: 20px;
+            align-items: flex-start;
+            p.slide-desc {
+                font-size: 1.375rem;
+            }
+        }
+        @media screen and (min-width: 81.25rem) {
+            padding-left: calc(((100vw - var(--width-max))/2) + 20px);
+        }
+    }
+}
+
+
+#app .core-widget.showcase {
+    &::before {
+        z-index: 1;
+    }
+    .image-wrapper:not(.content .image-wrapper) {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        .responsive-picture {
+            display: flex;
+            width: 100%;
+            img {
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+    .content {
+        z-index: 2;
     }
 }

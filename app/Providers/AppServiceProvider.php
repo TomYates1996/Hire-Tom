@@ -21,7 +21,16 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Inertia::share([
-            'cms' => config('cms'),
+            'cms' => [
+                'site_name' => config('cms.site_name'),
+                'city' => config('cms.city'),
+                'blog' => config('cms.blog'),
+                'events' => config('cms.events'),
+                'listings' => config('cms.listings'),
+                'products' => config('cms.products'),
+                'categories' => config('cms.categories'),
+                'coupons' => config('cms.coupons'),
+            ],
         ]);
     }
 }
