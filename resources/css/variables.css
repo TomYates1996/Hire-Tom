@@ -20,6 +20,7 @@
         --dull-green: #32570a;
         --pale-green: #afd18a;
         --blue-green: #78fad1;
+        --dark-blue: #006075;
         /* Button Colours */
         --btn-one: #00c2ed;
         --btn-two: #b4006c;
@@ -194,7 +195,7 @@
                 color: var(--white);
                 font-weight: 600;
                 @media screen and (min-width: 64em) {
-                    font-size: 1rem;          
+                    font-size: 1.4rem;          
                 }
             }
             .page-item.level-2 a {
@@ -415,5 +416,35 @@ footer.footer-top {
     }
     .content {
         z-index: 2;
+    }
+}
+
+#app .core-widget.cards_wide.cards_wide_3 {
+    .content {
+        gap: 20px;
+        @media screen and (min-width: 40em) {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .item {
+            .text-section {
+                .slide-desc {
+                    line-height: 1.6;
+                }
+                @media screen and (min-width: 40em) {
+                    .slide-title {
+                        font-size: 1.875rem;
+                    }
+                }
+            }
+            .image-section {
+                position: relative;
+                .responsive-picture {
+                    border: 10px solid var(--black);
+                    border-bottom-width: 14px;
+                    border-radius: 14px;overflow: hidden;
+                }
+            }
+        }
     }
 }
