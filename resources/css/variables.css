@@ -172,7 +172,7 @@
     }
 }
 
-#app .front-page-wrapper.home {
+#app .front-page-wrapper:has(> .header-wrapper.is-overlay) {
     nav {
         background-color: transparent;
         background-image: linear-gradient(to top,#0000,#000000b3);
