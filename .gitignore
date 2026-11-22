@@ -23,3 +23,5 @@ yarn-error.log
 /.vscode
 /.zed
 deploy.sh
+deploy.old.sh
+/storage/keys/

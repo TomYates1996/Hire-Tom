@@ -19,4 +19,6 @@ return [
     'products' => true,
     'categories' => true,
     'coupons' => true,
+    'bookings' => true,
+    'generate_site' => false,
 ];

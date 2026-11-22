@@ -23,13 +23,16 @@ class AppServiceProvider extends ServiceProvider
         Inertia::share([
             'cms' => [
                 'site_name' => config('cms.site_name'),
-                'city' => config('cms.city'),
+                // 'city' => config('cms.city'),
+                'blog_page' => 'blog',
                 'blog' => config('cms.blog'),
                 'events' => config('cms.events'),
                 'listings' => config('cms.listings'),
                 'products' => config('cms.products'),
                 'categories' => config('cms.categories'),
                 'coupons' => config('cms.coupons'),
+                'bookings' => config('cms.bookings'),
+                'generate_site' => config('cms.generate_site'),
             ],
         ]);
     }
