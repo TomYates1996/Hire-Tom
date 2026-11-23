@@ -7650,12 +7650,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:TomYates1996/cms-core.git",
-                "reference": "9fa0d7403e587c29715c3686697fe9662cf0313e"
+                "reference": "1339f34002df99345682a2fa76fb64b16433b7f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomYates1996/cms-core/zipball/9fa0d7403e587c29715c3686697fe9662cf0313e",
-                "reference": "9fa0d7403e587c29715c3686697fe9662cf0313e",
+                "url": "https://api.github.com/repos/TomYates1996/cms-core/zipball/1339f34002df99345682a2fa76fb64b16433b7f8",
+                "reference": "1339f34002df99345682a2fa76fb64b16433b7f8",
                 "shasum": ""
             },
             "require": {
@@ -7693,7 +7693,7 @@
                 "source": "https://github.com/TomYates1996/cms-core/tree/main",
                 "issues": "https://github.com/TomYates1996/cms-core/issues"
             },
-            "time": "2026-11-23T20:51:54+00:00"
+            "time": "2026-11-23T23:39:04+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
