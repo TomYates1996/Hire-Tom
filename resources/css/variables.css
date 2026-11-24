@@ -551,6 +551,8 @@
             font-size: 1.125rem;
             padding-bottom: 20px;
             font-weight: 400;
+            max-width: 30em;
+            text-wrap: pretty;
         }
         a.btn-read-more {
             background-color: transparent;
