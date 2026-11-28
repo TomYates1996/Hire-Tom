@@ -708,3 +708,128 @@
 }
 
 
+/* Project detail pages (any page with a tech logo strip) */
+#app .front-page-wrapper:has(.core-widget.slider_icon) {
+    --proj-soft: color-mix(in srgb, var(--primary-colour) 5%, #fff);
+    --proj-line: color-mix(in srgb, var(--primary-colour) 14%, transparent);
+
+    .core-widget.slider_icon {
+        background-color: var(--white);
+        border-top: 1px solid var(--proj-line);
+        border-bottom: 1px solid var(--proj-line);
+        .swiper {
+            max-width: 760px;
+            padding: 22px 20px;
+            mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+        }
+    }
+
+    .core-widget.side_by_side {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        padding: 0 20px;
+        .content .item {
+            max-width: 1040px;
+            gap: 40px;
+            .text-section {
+                background-color: transparent;
+                .slide-title {
+                    color: var(--primary-colour);
+                    font-weight: 800;
+                }
+                .slide-desc {
+                    font-size: 1.05rem;
+                    line-height: 1.7;
+                }
+            }
+        }
+    }
+
+    .core-widget.side_by_side.side_by_side_phone_showcase .content .item,
+    .core-widget.side_by_side.side_by_side_phone_showcase_flip .content .item {
+        padding: 32px 24px;
+        border: 1px solid var(--proj-line);
+        border-radius: 20px;
+        background-color: var(--proj-soft);
+        @media screen and (min-width: 40em) {
+            padding: 40px 48px;
+        }
+        .text-section {
+            background-color: transparent;
+        }
+    }
+
+    .core-widget.side_by_side.side_by_side_phone_showcase_flip .content {
+        padding: 0;
+    }
+
+    .core-widget.button.right_button,
+    .core-widget.button.right_button_alt {
+        justify-content: center;
+        margin-top: 8px;
+        margin-bottom: 40px;
+        .widget-button {
+            margin: 0 auto;
+            padding: 8px 20px 8px 10px;
+            border-color: var(--primary-colour);
+            border-radius: 10px;
+            background-color: var(--primary-colour);
+            .button-text {
+                max-width: none;
+                font-size: 1rem;
+            }
+            @media (hover: hover) {
+                &:hover {
+                    border-color: var(--primary-colour);
+                    background-color: var(--secondary-colour);
+                    .button-text {
+                        color: var(--primary-colour);
+                    }
+                }
+            }
+        }
+    }
+
+    .core-widget.text-box {
+        margin-top: -16px;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .core-widget.text-box .text-box-content {
+        max-width: 60ch;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0.95rem;
+        font-style: italic;
+        opacity: 0.75;
+    }
+
+    .core-widget.cards_3_across {
+        max-width: 1040px;
+        margin: 48px auto 40px;
+        padding: 0 20px;
+        .widget-header .widget-title {
+            color: var(--primary-colour);
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+        .content .item {
+            .image-section {
+                overflow: hidden;
+                border: 1px solid var(--proj-line);
+                border-radius: 14px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            &:hover .image-section {
+                transform: translateY(-4px);
+                box-shadow: 0 14px 30px color-mix(in srgb, var(--primary-colour) 14%, transparent);
+            }
+            .slide-title a {
+                color: var(--primary-colour);
+                font-weight: 800;
+            }
+        }
+    }
+}
