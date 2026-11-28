@@ -716,10 +716,10 @@
     .core-widget.showcase {
         &::before {
             background-color: transparent;
-            background-image: linear-gradient(90deg, color-mix(in srgb, var(--primary-colour) 90%, transparent) 0%, color-mix(in srgb, var(--primary-colour) 68%, transparent) 45%, color-mix(in srgb, var(--primary-colour) 38%, transparent) 100%);
+            background-image: linear-gradient(90deg, color-mix(in srgb, var(--primary-colour) 72%, transparent) 0%, color-mix(in srgb, var(--primary-colour) 45%, transparent) 45%, color-mix(in srgb, var(--primary-colour) 18%, transparent) 100%);
         }
         &.showcase_alt::before {
-            background-image: linear-gradient(270deg, color-mix(in srgb, var(--primary-colour) 90%, transparent) 0%, color-mix(in srgb, var(--primary-colour) 68%, transparent) 45%, color-mix(in srgb, var(--primary-colour) 38%, transparent) 100%);
+            background-image: linear-gradient(270deg, color-mix(in srgb, var(--primary-colour) 72%, transparent) 0%, color-mix(in srgb, var(--primary-colour) 45%, transparent) 45%, color-mix(in srgb, var(--primary-colour) 18%, transparent) 100%);
         }
         .widget-header {
             p.widget-description {
@@ -946,7 +946,7 @@
 
 /* Call-to-action photo strips (spacers with text) get the site purple */
 #app .core-widget.image.image_spacer:has(.slide-title) .content::before {
-    background-color: color-mix(in srgb, var(--primary-colour) 84%, transparent);
+    background-color: color-mix(in srgb, var(--primary-colour) 62%, transparent);
 }
 
 /* Home page */
@@ -964,10 +964,10 @@
     .core-widget.showcase {
         &::before {
             background-color: transparent;
-            background-image: linear-gradient(90deg, color-mix(in srgb, var(--primary-colour) 90%, transparent) 0%, color-mix(in srgb, var(--primary-colour) 68%, transparent) 45%, color-mix(in srgb, var(--primary-colour) 38%, transparent) 100%);
+            background-image: linear-gradient(90deg, color-mix(in srgb, var(--primary-colour) 72%, transparent) 0%, color-mix(in srgb, var(--primary-colour) 45%, transparent) 45%, color-mix(in srgb, var(--primary-colour) 18%, transparent) 100%);
         }
         &.showcase_alt::before {
-            background-image: linear-gradient(270deg, color-mix(in srgb, var(--primary-colour) 90%, transparent) 0%, color-mix(in srgb, var(--primary-colour) 68%, transparent) 45%, color-mix(in srgb, var(--primary-colour) 38%, transparent) 100%);
+            background-image: linear-gradient(270deg, color-mix(in srgb, var(--primary-colour) 72%, transparent) 0%, color-mix(in srgb, var(--primary-colour) 45%, transparent) 45%, color-mix(in srgb, var(--primary-colour) 18%, transparent) 100%);
         }
         .widget-header {
             p.widget-description {
