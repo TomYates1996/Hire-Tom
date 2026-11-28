@@ -778,8 +778,11 @@
             .text-section {
                 background-color: transparent;
                 .slide-title {
+                    width: fit-content;
+                    padding: 0 2px;
                     color: var(--primary-colour);
                     font-weight: 800;
+                    background-image: linear-gradient(transparent 64%, color-mix(in srgb, var(--secondary-colour) 85%, transparent) 64%);
                 }
                 .slide-desc {
                     font-size: 1.05rem;
@@ -789,22 +792,46 @@
         }
     }
 
-    .core-widget.side_by_side.side_by_side_phone_showcase .content .item,
-    .core-widget.side_by_side.side_by_side_phone_showcase_flip .content .item {
-        padding: 32px 24px;
-        border: 1px solid var(--proj-line);
-        border-radius: 20px;
-        background-color: var(--proj-soft);
-        @media screen and (min-width: 40em) {
-            padding: 40px 48px;
+    .core-widget.side_by_side.side_by_side_phone_showcase,
+    .core-widget.side_by_side.side_by_side_phone_showcase_flip {
+        --proj-band: color-mix(in srgb, var(--primary-colour) 6%, #fff);
+        position: relative;
+        max-width: none;
+        width: 100%;
+        margin-top: 88px;
+        margin-bottom: 88px;
+        padding: 40px 20px;
+        background-color: var(--proj-band);
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 36px;
+            background-color: var(--proj-band);
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 48' preserveAspectRatio='none'%3E%3Cpath d='M0 48H1440V28C1200 0 960 48 720 28S240 0 0 28Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+            pointer-events: none;
         }
-        .text-section {
+        &::before {
+            top: -35px;
+        }
+        &::after {
+            bottom: -35px;
+            transform: scaleY(-1);
+        }
+        .content {
+            padding: 0;
+        }
+        .content .item,
+        .content .item .text-section {
+            border: 0;
+            border-radius: 0;
             background-color: transparent;
         }
-    }
-
-    .core-widget.side_by_side.side_by_side_phone_showcase_flip .content {
-        padding: 0;
+        .content .item {
+            padding: 0;
+        }
     }
 
     .core-widget.button.right_button,
@@ -834,14 +861,53 @@
         }
     }
 
-    .core-widget.text-box {
+    .core-widget.text-box:has(.text-box-content > h3:first-child) {
+        max-width: none;
+        width: 100%;
+        margin: 0;
+        padding: 48px 20px 56px;
+        background-color: var(--primary-colour);
+        color: var(--white);
+        .text-box-content {
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        h3 {
+            margin: 0 0 14px;
+            color: var(--secondary-colour);
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+        ul,
+        ol {
+            display: grid;
+            gap: 10px 32px;
+            margin: 0;
+            padding-left: 20px;
+            list-style: disc;
+            @media screen and (min-width: 48em) {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        li {
+            display: list-item;
+            color: var(--white);
+            &::marker {
+                color: var(--secondary-colour);
+            }
+        }
+    }
+
+    .core-widget.text-box:not(:has(.text-box-content > h3:first-child)) {
         margin-top: -16px;
         margin-bottom: 0;
         padding-top: 0;
         padding-bottom: 0;
     }
 
-    .core-widget.text-box .text-box-content {
+    .core-widget.text-box:not(:has(.text-box-content > h3:first-child)) .text-box-content {
         max-width: 60ch;
         margin: 0 auto;
         text-align: center;
